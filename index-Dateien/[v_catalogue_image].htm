@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ELAINE - MAINTENANCE</title>
+
+  <link rel="stylesheet" href="/gui/dist/elaine.css" type="text/css"/>
+</head>
+<body id="login_screen" class="login">
+<div id="main_wrapper">
+  <div class="container">
+
+    <div class="login_container">
+
+      <div class="login_container_left">
+        <div class="logo_container">
+          <div class="systemShow">
+            <div class="productShow">
+              <div class="greenSymbol">
+                <div class="productName">
+                  <div>ELAINE SIX</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="login_container_right">
+        <div class="login_container_right_header">
+          <span class="login_container_right_header_title">Realtime CRM Automation</span>
+        </div>
+        <div class="tab-content login_container_right_body">
+          <div id="login_tab" class="tab-pane fade in active">
+            <form class="form">
+              <div class="under_maintenance">
+                <p>Die von Ihnen verwendete URL ist leider nicht gültig. Es konnte kein gültiger Datensatz ermittelt werden. Aus Sicherheitsgründen wurden Sie auf diese Seite weitergeleitet.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
